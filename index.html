@@ -507,7 +507,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("img/black-sunglasses-near-macbook-pro-and-ipad-196659.jpg") top center;
+  background: url("img/computer-desk-electronics-indoors-374074.jpg") top center;
   background-size: cover;
 }
 
@@ -1455,7 +1455,6 @@ section {
       <nav class="nav-menu">
         <ul>
           
-          <li><a href="#images"><i class="bx bx-image"></i> <span>Photos</span></a></li>
 <!--		  <li><a href="#comment"><i class="bx bx-comment"></i> <span>Comment for me</span></a></li>   -->
 		  <li><a href="#about"><i class="bx bx-file"></i> <span>About</span></a></li>
           <li><a href="#skills"><i class="bx bx-navigation"></i> <span>Skills</span></a></li>
@@ -1481,119 +1480,13 @@ section {
 <main id="main">
 
    
- <!-- =======Photos Section ======= -->
-    <section id="images" class="images">
-      <div class="container">
-<div class="content">
-        <div class="py-4 px-3 px-md-4">
 
-            <div class="mb-3 mb-md-4 d-flex justify-content-between">
-                <div class="h3 mb-0"></div>
-				<br><br><br><br>
-			<?php
-  
-
-   $conn=mysqli_connect('localhost','root','','hassaan');
-
-
-   $sql="select * from images ";
-
-   $query=mysqli_query($conn,$sql);	
-      
-   while($res = mysqli_fetch_array($query)){
-   
-?>
- 				
-	
-
- <div class="card" style="width:50%">
-  <img  src="<?php echo  $res['image'];?>" style="width:100%">
-  <div class="container">
-    <h4><b>Muhammad Hassaan Khan</b></h4>  
-    <p><?php echo  $res['text'];?></p>
-  	
-  </div>
-</div>
 	
 	<?php
  }
 ?>
 </div>
  
- <!-- ======= comment section ======= -->
- <!--  <section id="comment" class="comment">
-      <div class="container">
-		<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="index.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Phone no</label>
-                  <input type="number" class="form-control" name="phoneno" id="phoneno" data-rule="phoneo" data-msg="Please enter a valid phoneo" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-             <div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit"  name="submit">
-							Send
-						</button>
-					</div>
-
-              
-            </form>
-          </div>
-
-        </div>
-<?php
-if(isset($_POST["submit"])){
- 
- $name = $_POST['name'];
- $phoeno = $_POST['phoneo'];
- $message = $_POST['message'];
- 
- //making db connection
- $conn = mysqli_connect('ftpupload.net', 'epiz_25958472', 'hassaankhan') or die (mysqli_error()); // DB Connection
- $db = mysqli_select_db($conn, 'epiz_25958472_hassaan') or die("DB Error"); // Select DB from database
- //Selecting Database
- 
- $numrows = mysqli_num_rows($query);
- if($numrows == 0)
- {
- //Insert to Mysqli Query
- $sql = "INSERT INTO comments(name,phoneo,message) VALUES('$name','$phoneno','$message')";
- $result = mysqli_query($conn, $sql);
- //Result Message
- if($result){
- ?>
- <div class="alert alert-info">
-    <strong>Thanks</strong> for your comment   </div>
- <?PHP
- }
- else{
- ?>
- <div class="alert alert-danger">
-    <strong>Error</strong> plz try again   </div>
- <?PHP
- }
- }
- }
-
-?>
-
-
-
-
-	</div>
-   </section>-->
 
 
 
